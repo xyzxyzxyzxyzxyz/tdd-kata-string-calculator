@@ -42,7 +42,20 @@ public class StringCalculatorTest {
         assertResultEquals("Two numbers should return the sum of both",
                 "1,2", 3);
     }
-    
+
+
+    /**
+     * Feature #4: The calculate() method should be able to handle an unknown number of numbers
+     *
+     * Test #1: The calculate() method should be able to handle 3 numbers
+     */
+    @Test
+    public void calculateShouldAllow3Numbers() {
+        assertResultEquals("The calculate() method should be able to handle 3 numbers",
+                "1,2,3", 6);
+    }
+
+
 
     private void assertResultEquals(String message, String test, int expectedResult) {
         int result = StringCalculator.calculate(test);
