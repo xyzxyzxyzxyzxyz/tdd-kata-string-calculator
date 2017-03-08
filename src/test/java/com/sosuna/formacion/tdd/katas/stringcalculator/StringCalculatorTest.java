@@ -22,6 +22,12 @@ public class StringCalculatorTest {
     }
 
 
+    @Test
+    public void twoNumbersShouldReturnSum() {
+        assertResultEquals("Two numbers should return the sum of both",
+                "1,2", 3);
+    }
+
     //@Test
     public void testTemplate() {
         assertResultEquals("MESSAGE",
