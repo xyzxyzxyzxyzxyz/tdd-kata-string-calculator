@@ -7,7 +7,12 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
 public class StringCalculator {
 
     public static int calculate(String input) {
-        return Integer.parseInt(input);
+        if (input.length()==0) {
+            return 0;
+        }
+        else {
+            return Integer.parseInt(input);
+        }
     }
 
 }
