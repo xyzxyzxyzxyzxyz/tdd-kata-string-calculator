@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2f3f3bd-3b49-4e19-9a8d-cffef4066ab0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,8 +24,8 @@
           <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+                <state relative-caret-position="341">
+                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -70,8 +70,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
       </list>
     </option>
   </component>
@@ -612,16 +612,16 @@
     <history-entry file="StringCalculatorTest - 2017.03.08 at 10h 04m 01s.xml">
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringCalculatorTest_emptyStringShouldReturn0 - 2017.03.08 at 09h 40m 56s.xml">
-      <configuration name="StringCalculatorTest.emptyStringShouldReturn0" configurationId="JUnit" />
+    <history-entry file="StringCalculatorTest - 2017.03.08 at 10h 14m 15s.xml">
+      <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StringCalculatorTest_emptyStringShouldReturn0 - 2017.03.08 at 09h 44m 43s.xml">
       <configuration name="StringCalculatorTest.emptyStringShouldReturn0" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringCalculatorTest_singleNumberShouldReturnSameNumber - 2017.03.08 at 09h 39m 41s.xml">
-      <configuration name="StringCalculatorTest.singleNumberShouldReturnSameNumber" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StringCalculatorTest_twoNumbersShouldReturnSum - 2017.03.08 at 10h 03m 57s.xml">
+      <configuration name="StringCalculatorTest.twoNumbersShouldReturnSum" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest_twoNumbersShouldReturnSum - 2017.03.08 at 10h 14m 09s.xml">
       <configuration name="StringCalculatorTest.twoNumbersShouldReturnSum" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -747,8 +747,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="341">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

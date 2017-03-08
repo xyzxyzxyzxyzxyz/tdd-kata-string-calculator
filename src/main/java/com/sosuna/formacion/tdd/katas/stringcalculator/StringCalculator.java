@@ -10,6 +10,14 @@ public class StringCalculator {
         if (input.length()==0) {
             return 0;
         }
+        else if (input.contains(",")) {
+            String[] numbers = input.split(",");
+
+            int number1 = Integer.parseInt(numbers[0]);
+            int number2 = Integer.parseInt(numbers[1]);
+
+            return number1 + number2;
+        }
         else {
             return Integer.parseInt(input);
         }
