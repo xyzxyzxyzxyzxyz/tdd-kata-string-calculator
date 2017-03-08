@@ -17,6 +17,17 @@ public class StringCalculatorTest {
         assertEquals("Empty string should return 0", expectedResult, result);
     }
 
+
+    @Test
+    public void singleNumberShouldReturnSameNumber() {
+        String test = "1";
+        int expectedResult = 1;
+
+        int result = StringCalculator.calculate(test);
+        assertEquals("Single number should return that same number", expectedResult, result);
+    }
+
+
     //@Test
     public void testTemplate() {
         String test = "XXXX";
