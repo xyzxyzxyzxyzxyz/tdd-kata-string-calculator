@@ -10,31 +10,28 @@ public class StringCalculatorTest {
 
     @Test
     public void emptyStringShouldReturn0() {
-        String test = "";
-        int expectedResult = 0;
-
-        int result = StringCalculator.calculate(test);
-        assertEquals("Empty string should return 0", expectedResult, result);
+        assertResultEquals("Empty string should return 0",
+                "", 0);
     }
 
 
     @Test
     public void singleNumberShouldReturnSameNumber() {
-        String test = "1";
-        int expectedResult = 1;
-
-        int result = StringCalculator.calculate(test);
-        assertEquals("Single number should return that same number", expectedResult, result);
+        assertResultEquals("Single number should return that same number",
+                "1", 1);
     }
 
 
     //@Test
     public void testTemplate() {
-        String test = "XXXX";
-        int expectedResult = -1;
+        assertResultEquals("MESSAGE",
+                "TEST", 9999999);
+    }
 
+
+    private void assertResultEquals(String message, String test, int expectedResult) {
         int result = StringCalculator.calculate(test);
-        assertEquals("DESCRIPTION", expectedResult, result);
+        assertEquals(message, expectedResult, result);
     }
 
 }
