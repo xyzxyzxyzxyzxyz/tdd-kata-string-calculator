@@ -8,8 +8,14 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class StringCalculatorTest {
 
+    @Test
+    public void emptyStringShouldReturn0() {
+        String test = "";
+        int expectedResult = 0;
 
-
+        int result = StringCalculator.calculate(test);
+        assertEquals("Empty string should return 0", expectedResult, result);
+    }
 
     //@Test
     public void testTemplate() {
