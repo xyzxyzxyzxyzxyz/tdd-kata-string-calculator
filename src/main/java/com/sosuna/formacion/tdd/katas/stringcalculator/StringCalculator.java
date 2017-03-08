@@ -6,8 +6,8 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
  */
 public class StringCalculator {
 
-    public static int calculate(String test) {
-        return 0;
+    public static int calculate(String input) {
+        return Integer.parseInt(input);
     }
 
 }
