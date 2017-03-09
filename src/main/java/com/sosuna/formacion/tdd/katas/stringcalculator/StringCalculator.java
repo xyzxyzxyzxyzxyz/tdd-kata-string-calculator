@@ -17,7 +17,7 @@ public class StringCalculator {
             return new int[0];
         }
 
-        String[] numberTokens = input.split(",");
+        String[] numberTokens = input.split("[,\n]");
         int[] numbers = new int[numberTokens.length];
 
         for (int i=0; i<numberTokens.length; i++) {
