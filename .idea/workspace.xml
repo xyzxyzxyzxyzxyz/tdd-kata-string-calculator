@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2f3f3bd-3b49-4e19-9a8d-cffef4066ab0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,8 +24,8 @@
           <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="451">
-                  <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+                <state relative-caret-position="22">
+                  <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -38,8 +38,8 @@
           <file leaf-file-name="StringCalculatorTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+                <state relative-caret-position="275">
+                  <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -70,8 +70,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
       </list>
     </option>
   </component>
@@ -292,6 +292,32 @@
       <option name="PACKAGE_NAME" value="com.sosuna.formacion.tdd.katas.stringcalculator" />
       <option name="MAIN_CLASS_NAME" value="com.sosuna.formacion.tdd.katas.stringcalculator.StringCalculatorTest" />
       <option name="METHOD_NAME" value="twoNumbersShouldReturnSum" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StringCalculatorTest.calculateShouldAllow3Numbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sosuna.formacion.tdd.katas.stringcalculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="kata-string-calculator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sosuna.formacion.tdd.katas.stringcalculator" />
+      <option name="MAIN_CLASS_NAME" value="com.sosuna.formacion.tdd.katas.stringcalculator.StringCalculatorTest" />
+      <option name="METHOD_NAME" value="calculateShouldAllow3Numbers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -560,18 +586,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.emptyStringShouldReturn0" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.singleNumberShouldReturnSameNumber" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.twoNumbersShouldReturnSum" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.calculateShouldAllow3Numbers" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.twoNumbersShouldReturnSum" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.emptyStringShouldReturn0" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.singleNumberShouldReturnSameNumber" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.calculateShouldAllow3Numbers" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.twoNumbersShouldReturnSum" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.emptyStringShouldReturn0" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StringCalculatorTest.singleNumberShouldReturnSameNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -594,12 +622,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StringCalculatorTest - 2017.03.08 at 09h 55m 52s.xml">
-      <configuration name="StringCalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringCalculatorTest - 2017.03.08 at 09h 57m 01s.xml">
-      <configuration name="StringCalculatorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StringCalculatorTest - 2017.03.08 at 10h 04m 01s.xml">
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
@@ -617,6 +639,12 @@
     </history-entry>
     <history-entry file="StringCalculatorTest - 2017.03.08 at 10h 53m 37s.xml">
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest - 2017.03.09 at 09h 30m 17s.xml">
+      <configuration name="StringCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest_calculateShouldAllow3Numbers - 2017.03.09 at 09h 25m 10s.xml">
+      <configuration name="StringCalculatorTest.calculateShouldAllow3Numbers" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StringCalculatorTest_twoNumbersShouldReturnSum - 2017.03.08 at 10h 03m 57s.xml">
       <configuration name="StringCalculatorTest.twoNumbersShouldReturnSum" configurationId="JUnit" />
@@ -747,16 +775,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="22">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="275">
+          <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

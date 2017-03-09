@@ -56,6 +56,18 @@ public class StringCalculatorTest {
     }
 
 
+    /**
+     * Feature #4: The calculate() method should be able to handle an unknown number of numbers
+     *
+     * Test #4.1: The calculate() method should be able to handle 30 numbers
+     */
+    @Test
+    public void calculateShouldAllow30Numbers() {
+        assertResultEquals("The calculate() method should be able to handle 3 numbers",
+                "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30",
+                465);   // (1+30)*15
+    }
+
 
     private void assertResultEquals(String message, String test, int expectedResult) {
         int result = StringCalculator.calculate(test);
