@@ -3,6 +3,8 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class StringCalculatorTest {
 
     /**
@@ -40,5 +42,15 @@ public class StringCalculatorTest {
                 "1,2", 3);
     }
 
+
+    /**
+     * Feature #7: Negative numbers should throw an exception
+     *
+     * Test #7.1: One negative number should throw an exception
+     */
+    @Test(expected = StringCalculator.NegativeNumbersException.class)
+    public void oneNegativeNumberShouldThrowAnException() {
+        StringCalculator.calculate("-1,2");
+    }
 
 }
