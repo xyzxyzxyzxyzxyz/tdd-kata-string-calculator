@@ -3,14 +3,14 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
 import static org.junit.Assert.*;
 
 class StringCalculatorTestUtils {
-    static void assertResultEquals(String message, String input, int expectedResult) {
-        int result = StringCalculator.calculate(input);
+    static void assertResultEquals(StringCalculator calculator, String message, String input, int expectedResult) {
+        int result = calculator.calculate(input);
         assertEquals(message, expectedResult, result);
     }
 
-    static void assertRaises(String message, String input, Class<? extends Throwable> expectedToRaise) {
+    static void assertRaises(StringCalculator calculator, String message, String input, Class<? extends Throwable> expectedToRaise) {
         try {
-            int result = StringCalculator.calculate(input);
+            int result = calculator.calculate(input);
             fail(
                     (message!=null? (message + ". ") : "")
                     + "Expected to raise a Throwable of type ["+expectedToRaise.getName()+"], but returned with result ["+result+"]"

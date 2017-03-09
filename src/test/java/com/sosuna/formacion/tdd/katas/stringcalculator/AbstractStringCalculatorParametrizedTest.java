@@ -1,9 +1,9 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
 
 
 /**
@@ -43,16 +43,23 @@ public abstract class AbstractStringCalculatorParametrizedTest {
     public AbstractStringCalculatorParametrizedTest() {
     }
 
+    private StringCalculator calculator;
+
+    @Before
+    public void setUp() {
+        calculator = new StringCalculator();
+    }
+
     @Test
     public void test() {
         if (expectedResult==null) {
             throw new IllegalArgumentException("Test must specify an expected result, either an integer or an exception class");
         }
         else if (expectedResult instanceof Integer) {
-            StringCalculatorTestUtils.assertResultEquals(message, input, (Integer) expectedResult);
+            StringCalculatorTestUtils.assertResultEquals(calculator, message, input, (Integer) expectedResult);
         }
         else if (expectedResult instanceof Class) {
-            StringCalculatorTestUtils.assertRaises(message, input, (Class) expectedResult);
+            StringCalculatorTestUtils.assertRaises(calculator, message, input, (Class) expectedResult);
         }
         else {
             throw new IllegalArgumentException("Unexpected value for expectedResult. Type = ["+expectedResult.getClass().getName()+"]. Value = ["+expectedResult+"]");

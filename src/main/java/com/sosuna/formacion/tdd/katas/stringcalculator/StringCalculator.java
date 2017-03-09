@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  */
 public class StringCalculator {
 
-    public static int calculate(String input) throws NegativeNumbersException {
+    public int calculate(String input) throws NegativeNumbersException {
         ParsedInputData parsedInput = parseInput(input);
 
         int[] numbers = parseNumbers(parsedInput);
@@ -22,7 +22,7 @@ public class StringCalculator {
         return sum;
     }
 
-    private static ParsedInputData parseInput(String input) {
+    private ParsedInputData parseInput(String input) {
         ParsedInputData data = new ParsedInputData();
 
         data.altSeparators = parseAltSeparators(input);
@@ -31,7 +31,7 @@ public class StringCalculator {
         return data;
     }
 
-    private static String[] parseAltSeparators(String input) {
+    private String[] parseAltSeparators(String input) {
         // Check for alternate separators definition in input
         if (!input.startsWith("//")) {
             // No alternate separators definition in input
@@ -53,16 +53,16 @@ public class StringCalculator {
         }
     }
 
-    private static String[] parseSingleAltSeparatorSpec(String altSeparatorsSpec) {
+    private String[] parseSingleAltSeparatorSpec(String altSeparatorsSpec) {
         return new String[] { altSeparatorsSpec };
     }
 
-    private static boolean isMultipleLongAltSeparatorsSpec(String altSeparatorsSpec) {
+    private boolean isMultipleLongAltSeparatorsSpec(String altSeparatorsSpec) {
         return altSeparatorsSpec.startsWith("[") && altSeparatorsSpec.endsWith("]");
     }
 
-    private static Pattern MULTI_LONG_ALT_SEP_PATTERN = Pattern.compile("\\[([^\\]]+)\\]");
-    private static String[] parseMultipleLongAltSeparatorsSpec(String altSeparatorsSpec) {
+    private static final Pattern MULTI_LONG_ALT_SEP_PATTERN = Pattern.compile("\\[([^\\]]+)\\]");
+    private String[] parseMultipleLongAltSeparatorsSpec(String altSeparatorsSpec) {
         Matcher m = MULTI_LONG_ALT_SEP_PATTERN.matcher(altSeparatorsSpec);
 
         // Unrepeated alt separators
@@ -88,7 +88,7 @@ public class StringCalculator {
         return altSeparators.toArray(new String[altSeparators.size()]);
     }
 
-    private static String parseNumbersList(String input) {
+    private String parseNumbersList(String input) {
         // Check for alternate separator definition in input
         if (input.startsWith("//")) {
             // Skip alternate separator definition in input
@@ -98,7 +98,7 @@ public class StringCalculator {
         return input;
     }
 
-    private static int[] parseNumbers(ParsedInputData parsedInput) throws NegativeNumbersException {
+    private int[] parseNumbers(ParsedInputData parsedInput) throws NegativeNumbersException {
         // Split the tokens using the default and alternative separators
         String[] numberTokens =  splitNumbersList(parsedInput);
 
@@ -126,7 +126,7 @@ public class StringCalculator {
         return numbers;
     }
 
-    private static String[] splitNumbersList(ParsedInputData parsedInput) {
+    private String[] splitNumbersList(ParsedInputData parsedInput) {
         // If numbers list is empty, return 0
         if (parsedInput.numbersList.length()==0) {
             return new String[0];
@@ -142,7 +142,7 @@ public class StringCalculator {
         return tokens;
     }
 
-    private static String buildSplittingRegex(ParsedInputData parsedInput) {
+    private String buildSplittingRegex(ParsedInputData parsedInput) {
         // Define default separators
         StringBuilder splittingRegex = new StringBuilder("[,\n]");
 
@@ -159,7 +159,7 @@ public class StringCalculator {
         return splittingRegex.toString();
     }
 
-    private static int sumNumbers(int[] numbers) {
+    private int sumNumbers(int[] numbers) {
         int sum = 0;
 
         // Sum all the numbers.
