@@ -10,23 +10,25 @@ import java.util.List;
 public class StringCalculator {
 
     public static int calculate(String input) throws NegativeNumbersException {
-        String[] parsedInput = parseInput(input);
-        String altSeparator = parsedInput[0];
-        String numbersList = parsedInput[1];
+        ParsedInputData parsedInput = parseInput(input);
 
-        int[] numbers = parseNumbers(altSeparator, numbersList);
+        int[] numbers = parseNumbers(parsedInput);
         int sum = sumNumbers(numbers);
         return sum;
     }
 
-    private static String[] parseInput(String input) {
-        String altSeparator = parseAltSeparator(input);
-        String numbersList = parseNumbersList(input);
+    private static ParsedInputData parseInput(String input) {
+        ParsedInputData data = new ParsedInputData();
 
-        return new String[] { altSeparator, numbersList };
+        data.altSeparators = parseAltSeparators(input);
+        data.numbersList = parseNumbersList(input);
+
+        return data;
     }
 
-    private static String parseAltSeparator(String input) {
+    private static String[] parseAltSeparators(String input) {
+        // TODO: Parse multiple separators
+
         // Check for alternate separator definition in input
         if (!input.startsWith("//")) {
             // No alternate separator definition in input
@@ -44,7 +46,7 @@ public class StringCalculator {
             altSeparator = altSeparator.substring(1, altSeparator.length()-1);
         }
 
-        return altSeparator;
+        return new String[] { altSeparator };
     }
 
     private static String parseNumbersList(String input) {
@@ -57,9 +59,9 @@ public class StringCalculator {
         return input;
     }
 
-    private static int[] parseNumbers(String altSeparator, String numbersList) throws NegativeNumbersException {
+    private static int[] parseNumbers(ParsedInputData parsedInput) throws NegativeNumbersException {
         // Split the tokens using the default and alternative separators
-        String[] numberTokens =  splitNumbersList(altSeparator, numbersList);
+        String[] numberTokens =  splitNumbersList(parsedInput);
 
         // Parse the numbers from the tokens
         // If there are negative numbers in the list, store them in an additional list
@@ -85,20 +87,23 @@ public class StringCalculator {
         return numbers;
     }
 
-    private static String[] splitNumbersList(String altSeparator, String numbersList) {
+    private static String[] splitNumbersList(ParsedInputData parsedInput) {
         // If numbers list is empty, return 0
-        if (numbersList.length()==0) {
+        if (parsedInput.numbersList.length()==0) {
             return new String[0];
         }
 
-        // Default separator
+        // Default separators
         String splittingRegex = "[,\n]";
+
+        // TODO: Process multiple separators
+        String altSeparator = parsedInput.altSeparators==null ? null : parsedInput.altSeparators[0];
 
         if (altSeparator != null) {
             splittingRegex += ("|(\\Q"+altSeparator+"\\E)");
         }
 
-        String[] tokens = numbersList.split(splittingRegex);
+        String[] tokens = parsedInput.numbersList.split(splittingRegex);
 
         return tokens;
     }
@@ -121,11 +126,16 @@ public class StringCalculator {
     /**
      * Negative numbers error
      */
-    public static final class NegativeNumbersException extends IllegalArgumentException {
+    public static class NegativeNumbersException extends IllegalArgumentException {
 
         private NegativeNumbersException(List<Integer> negativeNumbers) {
             super("List has negative numbers: ["+negativeNumbers.toString()+"]");
         }
 
+    }
+
+    private static class ParsedInputData {
+        public String[] altSeparators;
+        public String numbersList;
     }
 }
