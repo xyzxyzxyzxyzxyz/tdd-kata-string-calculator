@@ -1,12 +1,15 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * TDD Kata:
  *      http://osherove.com/tdd-kata-1/
  */
 public class StringCalculator {
 
-    public static int calculate(String input) {
+    public static int calculate(String input) throws NegativeNumbersException {
         String[] parsedInput = parseInput(input);
         String altSeparator = parsedInput[0];
         String numbersList = parsedInput[1];
@@ -46,14 +49,31 @@ public class StringCalculator {
         return input;
     }
 
-    private static int[] parseNumbers(String altSeparator, String numbersList) {
+    private static int[] parseNumbers(String altSeparator, String numbersList) throws NegativeNumbersException {
+        // Split the tokens using the default and alternative separators
         String[] numberTokens =  splitNumbersList(altSeparator, numbersList);
 
+        // Parse the numbers from the tokens
+        // If there are negative numbers in the list, store them in an additional list
+
         int[] numbers = new int[numberTokens.length];
+        List<Integer> negativeNumbers = new ArrayList<Integer>();
+
         for (int i=0; i<numberTokens.length; i++) {
+            // Parse number
             numbers[i] = Integer.parseInt(numberTokens[i]);
+            // If negative, add to negatives' list
+            if (numbers[i]<0) {
+                negativeNumbers.add(numbers[i]);
+            }
         }
 
+        // If there are negative numbers, throw an error
+        if (negativeNumbers.size()>0) {
+            throw new NegativeNumbersException(negativeNumbers);
+        }
+
+        // No negatives, return the numbers list
         return numbers;
     }
 
@@ -85,4 +105,14 @@ public class StringCalculator {
         return sum;
     }
 
+    /**
+     * Negative numbers error
+     */
+    public static final class NegativeNumbersException extends IllegalArgumentException {
+
+        private NegativeNumbersException(List<Integer> negativeNumbers) {
+            super("List has negative numbers: ["+negativeNumbers.toString()+"]");
+        }
+
+    }
 }
