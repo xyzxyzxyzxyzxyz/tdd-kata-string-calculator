@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StringCalculatorInputParser {
+class StringCalculatorInputParser {
 
     public int[] parseInput(String input) throws NegativeNumbersException {
         // Parse the input data
