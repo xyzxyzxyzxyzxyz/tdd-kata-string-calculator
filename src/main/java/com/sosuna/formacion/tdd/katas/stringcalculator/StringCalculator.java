@@ -7,26 +7,34 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
 public class StringCalculator {
 
     public static int calculate(String input) {
+        int[] numbers = parseNumbers(input);
+        int sum = sumNumbers(numbers);
+        return sum;
+    }
+
+    private static int[] parseNumbers(String input) {
         if (input.length()==0) {
-            return 0;
+            return new int[0];
         }
-        else if (input.contains(",")) {
-            String[] numbers = input.split(",");
 
-            int number1 = Integer.parseInt(numbers[0]);
-            int number2 = Integer.parseInt(numbers[1]);
+        String[] numberTokens = input.split(",");
+        int[] numbers = new int[numberTokens.length];
 
-            if (numbers.length==3) {
-                int number3 = Integer.parseInt(numbers[2]);
-                return number1 + number2 + number3;
-            }
-            else {
-                return number1 + number2;
-            }
+        for (int i=0; i<numberTokens.length; i++) {
+            numbers[i] = Integer.parseInt(numberTokens[i]);
         }
-        else {
-            return Integer.parseInt(input);
+
+        return numbers;
+    }
+
+    private static int sumNumbers(int[] numbers) {
+        int sum = 0;
+
+        for (int i=0; i<numbers.length; i++) {
+            sum += numbers[i];
         }
+
+        return sum;
     }
 
 }
