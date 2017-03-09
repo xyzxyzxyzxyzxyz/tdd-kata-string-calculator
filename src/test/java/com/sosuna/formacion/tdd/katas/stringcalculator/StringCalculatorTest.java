@@ -53,4 +53,18 @@ public class StringCalculatorTest {
         StringCalculator.calculate("-1,2");
     }
 
+
+    /**
+     * Feature #8: Numbers bigger than 1000 should be ignored
+     *
+     * Test #8.1: Three numbers bigger than 1000 are ignored
+     */
+    @Test
+    public void threeNumbers1000PlusAreIgnored() {
+        StringCalculatorTestUtils.assertResultEquals(
+                "The three numbers bigger than 1000 should have been ignored",
+                "1,1001,2,2002,3,3003",
+                6);
+    }
+
 }
