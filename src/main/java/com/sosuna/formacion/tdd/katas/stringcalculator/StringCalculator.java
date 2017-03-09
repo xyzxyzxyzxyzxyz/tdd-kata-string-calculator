@@ -4,7 +4,7 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
  * TDD Kata:
  *      http://osherove.com/tdd-kata-1/
  */
-class StringCalculator {
+public class StringCalculator {
 
     private StringCalculatorInputParser inputParser;
     private StringCalculatorEngine engine;
