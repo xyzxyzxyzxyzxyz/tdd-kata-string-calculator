@@ -16,6 +16,11 @@ public class StringCalculatorFeature4Test {
     public static Object[][] data() {
         return new Object[][] {
                 {
+                        "The calculate() method should be able to handle 0 numbers",
+                        "",
+                        0
+                },
+                {
                         "The calculate() method should be able to handle 3 numbers",
                         "1,2,3",
                         6
