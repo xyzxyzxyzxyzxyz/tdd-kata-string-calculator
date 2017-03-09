@@ -1,16 +1,12 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.*;
+import org.junit.runners.Parameterized.Parameters;
 
 
 /**
  * Feature #4: The calculate() method should be able to handle an unknown number of numbers
  */
-@RunWith(Parameterized.class)
-public class StringCalculatorFeature4Test {
+public class StringCalculatorFeature4Test extends AbstractStringCalculatorParametrizedTest {
 
     @Parameters(name = "{0}")
     public static Object[][] data() {
@@ -31,22 +27,6 @@ public class StringCalculatorFeature4Test {
                         465
                 }
         };
-    }
-
-
-    private String message;
-    private String input;
-    private int expectedResult;
-
-    public StringCalculatorFeature4Test(String message, String input, int expectedResult) {
-        this.message = message;
-        this.input = input;
-        this.expectedResult = expectedResult;
-    }
-
-    @Test
-    public void test() {
-        StringCalculatorTestUtils.assertResultEquals(message, input, expectedResult);
     }
 
 }
