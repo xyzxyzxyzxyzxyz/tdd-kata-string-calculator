@@ -34,8 +34,16 @@ public class StringCalculator {
         }
 
         // Extract alternate separator
+
         // From "//" to "\n", not inclusive
         String altSeparator = input.substring(2, input.indexOf('\n'));
+
+        // If the alternate separator has the form "[xxx]", it's in the long format.
+        // Remove the brackets around it and leave "xxx"
+        if (altSeparator.startsWith("[") && altSeparator.endsWith("]")) {
+            altSeparator = altSeparator.substring(1, altSeparator.length()-1);
+        }
+
         return altSeparator;
     }
 

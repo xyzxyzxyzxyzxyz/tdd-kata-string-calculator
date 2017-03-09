@@ -22,7 +22,7 @@ public class StringCalculatorFeature9Test {
                 },
                 {
                         "Should accept input with default and long alternative separators",
-                        "//[---]\n" + "1,2\n3---\n4,5\n6---7",
+                        "//[---]\n" + "1,2\n3---4,5\n6---7",
                         28
                 }
         };
