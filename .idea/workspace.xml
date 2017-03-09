@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2f3f3bd-3b49-4e19-9a8d-cffef4066ab0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,8 +24,8 @@
           <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="101" column="30" lean-forward="false" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+                <state relative-caret-position="197">
+                  <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2056#2065#0" expanded="true" />
@@ -41,8 +41,8 @@
           <file leaf-file-name="StringCalculatorTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="64" column="69" lean-forward="true" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
+                <state relative-caret-position="153">
+                  <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1403#1404#0" expanded="true" />
@@ -103,8 +103,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature4Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature5Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature6Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
       </list>
     </option>
   </component>
@@ -677,9 +677,6 @@
     <history-entry file="StringCalculatorFeature6Test_data - 2017.03.09 at 12h 02m 39s.xml">
       <configuration name="StringCalculatorFeature6Test.data" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringCalculatorTest - 2017.03.09 at 09h 42m 06s.xml">
-      <configuration name="StringCalculatorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StringCalculatorTest - 2017.03.09 at 09h 43m 59s.xml">
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
@@ -693,6 +690,9 @@
       <configuration name="StringCalculatorTest.threeNumbers1000PlusAreIgnored" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StringCalculatorTest_threeNumbers1000PlusAreIgnored - 2017.03.09 at 15h 38m 21s.xml">
+      <configuration name="StringCalculatorTest.threeNumbers1000PlusAreIgnored" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest_threeNumbers1000PlusAreIgnored - 2017.03.09 at 15h 41m 50s.xml">
       <configuration name="StringCalculatorTest.threeNumbers1000PlusAreIgnored" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -710,7 +710,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32601535" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32601535" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -931,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="101" column="30" lean-forward="false" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+        <state relative-caret-position="197">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2056#2065#0" expanded="true" />
@@ -942,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="64" column="69" lean-forward="true" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
+        <state relative-caret-position="153">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1403#1404#0" expanded="true" />

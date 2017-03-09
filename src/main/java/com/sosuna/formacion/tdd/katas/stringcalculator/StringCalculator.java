@@ -98,8 +98,13 @@ public class StringCalculator {
     private static int sumNumbers(int[] numbers) {
         int sum = 0;
 
+        // Sum all the numbers.
+        // Numbers bigger than 1000 will be ignored
         for (int i=0; i<numbers.length; i++) {
-            sum += numbers[i];
+            // Ignore numbers bigger than 1000
+            if (numbers[i] <= 1000) {
+                sum += numbers[i];
+            }
         }
 
         return sum;
