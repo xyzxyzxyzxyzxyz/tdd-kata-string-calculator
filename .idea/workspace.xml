@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2f3f3bd-3b49-4e19-9a8d-cffef4066ab0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/ILogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.class" afterPath="$PROJECT_DIR$/target/classes/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/sosuna/formacion/tdd/katas/stringcalculator/AbstractStringCalculatorParametrizedTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/sosuna/formacion/tdd/katas/stringcalculator/AbstractStringCalculatorParametrizedTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature12Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/AbstractStringCalculatorParametrizedTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/AbstractStringCalculatorParametrizedTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature11Test.java" afterPath="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature11Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,21 +22,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+                <state relative-caret-position="87">
+                  <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ILogger.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ILogger.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/ILogger.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+                <state relative-caret-position="198">
+                  <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -83,14 +78,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="StringCalculatorFeature11Test.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature11Test.java">
+          <file leaf-file-name="StringCalculatorFeature12Test.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature12Test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="175">
+                  <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -146,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/AbstractStringCalculatorParametrizedTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature11Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature12Test.java" />
       </list>
     </option>
   </component>
@@ -723,12 +717,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_kata-string-calculator - 2017.03.10 at 00h 52m 27s.xml">
-      <configuration name="All in kata-string-calculator" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_kata-string-calculator - 2017.03.10 at 00h 52m 50s.xml">
-      <configuration name="All in kata-string-calculator" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_kata-string-calculator - 2017.03.10 at 00h 54m 36s.xml">
       <configuration name="All in kata-string-calculator" configurationId="JUnit" />
     </history-entry>
@@ -750,7 +738,13 @@
     <history-entry file="StringCalculatorFeature11Test - 2017.03.10 at 09h 15m 41s.xml">
       <configuration name="StringCalculatorFeature11Test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StringCalculatorFeature11Test - 2017.03.10 at 09h 22m 01s.xml">
+      <configuration name="StringCalculatorFeature11Test" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="StringCalculatorFeature11Test_calculatorShouldLogValidResults - 2017.03.10 at 09h 16m 22s.xml">
+      <configuration name="StringCalculatorFeature11Test.calculatorShouldLogValidResults" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorFeature11Test_calculatorShouldLogValidResults - 2017.03.10 at 09h 22m 17s.xml">
       <configuration name="StringCalculatorFeature11Test.calculatorShouldLogValidResults" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1078,14 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/ILogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/AbstractStringCalculatorParametrizedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1162,21 +1148,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature11Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="87">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature11Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sosuna/formacion/tdd/katas/stringcalculator/ILogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.7.15/mockito-core-2.7.15.jar!/org/mockito/ArgumentMatchers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sosuna/formacion/tdd/katas/stringcalculator/StringCalculatorFeature12Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
