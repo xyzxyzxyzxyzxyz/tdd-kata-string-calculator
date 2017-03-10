@@ -14,7 +14,7 @@ public class StringCalculatorFeature7Test extends AbstractStringCalculatorParame
                 {
                         "One negative number should throw an exception",
                         "-1,2",
-                        StringCalculatorInputParser.NegativeNumbersException.class
+                        NegativeNumbersException.class
                 }
         };
     }

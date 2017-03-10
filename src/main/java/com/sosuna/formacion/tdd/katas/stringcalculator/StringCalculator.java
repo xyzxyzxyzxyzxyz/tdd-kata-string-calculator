@@ -14,7 +14,7 @@ public class StringCalculator {
         engine = new StringCalculatorEngine();
     }
 
-    public int calculate(String input) throws StringCalculatorInputParser.NegativeNumbersException {
+    public int calculate(String input) throws NegativeNumbersException {
         // Obtain the numbers from the input data
         int[] numbers = inputParser.parseInput(input);
         // Calculate the sum

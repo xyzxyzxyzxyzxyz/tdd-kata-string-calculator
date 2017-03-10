@@ -1,15 +1,13 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class StringCalculatorInputParser {
 
-    public int[] parseInput(String input) throws NegativeNumbersException {
+    public int[] parseInput(String input) {
         // Parse the input data
         ParsedInputData parsedInput = parseInputData(input);
         // Parse the numbers from the input data
@@ -99,26 +97,15 @@ class StringCalculatorInputParser {
         String[] numberTokens =  splitNumbersList(parsedInput);
 
         // Parse the numbers from the tokens
-        // If there are negative numbers in the list, store them in an additional list
 
         int[] numbers = new int[numberTokens.length];
-        List<Integer> negativeNumbers = new ArrayList<Integer>();
 
         for (int i=0; i<numberTokens.length; i++) {
             // Parse number
             numbers[i] = Integer.parseInt(numberTokens[i]);
-            // If negative, add to negatives' list
-            if (numbers[i]<0) {
-                negativeNumbers.add(numbers[i]);
-            }
         }
 
-        // If there are negative numbers, throw an error
-        if (negativeNumbers.size()>0) {
-            throw new NegativeNumbersException(negativeNumbers);
-        }
-
-        // No negatives, return the numbers list
+        // Return the numbers list
         return numbers;
     }
 
@@ -153,17 +140,6 @@ class StringCalculatorInputParser {
 
         // Return splitting regex
         return splittingRegex.toString();
-    }
-
-    /**
-     * Negative numbers error
-     */
-    static class NegativeNumbersException extends IllegalArgumentException {
-
-        private NegativeNumbersException(List<Integer> negativeNumbers) {
-            super("List has negative numbers: ["+negativeNumbers.toString()+"]");
-        }
-
     }
 
     private static class ParsedInputData {
