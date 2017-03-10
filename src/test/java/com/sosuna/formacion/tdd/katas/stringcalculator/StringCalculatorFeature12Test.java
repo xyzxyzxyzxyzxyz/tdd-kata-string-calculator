@@ -3,12 +3,8 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
-
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 /**
  * Feature #12: Logging failure webservice
@@ -29,10 +25,10 @@ public class StringCalculatorFeature12Test {
 
     @Test
     public void calculatorShouldNotifyWebServiceWhenLoggingFails() {
-        final String LOG_MESSAGE = "Error writing to log output"
+        final String LOG_MESSAGE = "Error writing to log output";
 
         // Throw IOException when the logger is called to log the result
-        doThrow(new IOException(LOG_MESSAGE)).when(logger).write(anyString());
+        doThrow(new RuntimeException(LOG_MESSAGE)).when(logger).write(anyString());
 
         calculator.calculate("1,2,3");
 

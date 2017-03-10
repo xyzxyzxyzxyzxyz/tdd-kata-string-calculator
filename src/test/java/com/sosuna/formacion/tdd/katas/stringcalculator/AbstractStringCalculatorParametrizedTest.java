@@ -50,7 +50,9 @@ public abstract class AbstractStringCalculatorParametrizedTest {
     @Before
     public void setUp() {
         ILogger logger = mock(ILogger.class);
-        calculator = new StringCalculator(logger);
+        ILoggerFailureNotificationWebService loggerFailWS = mock(ILoggerFailureNotificationWebService.class);
+
+        calculator = new StringCalculator(logger, loggerFailWS);
     }
 
     @Test

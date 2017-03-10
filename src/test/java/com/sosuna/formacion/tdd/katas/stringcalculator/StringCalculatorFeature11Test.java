@@ -12,11 +12,14 @@ public class StringCalculatorFeature11Test {
 
     private StringCalculator calculator;
     private ILogger logger;
+    private ILoggerFailureNotificationWebService loggerFailWS;
 
     @Before
     public void setUp() {
         logger = mock(ILogger.class);
-        calculator = new StringCalculator(logger);
+        loggerFailWS = mock(ILoggerFailureNotificationWebService.class);
+
+        calculator = new StringCalculator(logger, loggerFailWS);
     }
 
     @Test

@@ -6,12 +6,16 @@ package com.sosuna.formacion.tdd.katas.stringcalculator;
  */
 public class StringCalculator {
 
+    private ILogger logger;
+    private ILoggerFailureNotificationWebService loggerFailWS;
+
     private StringCalculatorInputParser inputParser;
     private StringCalculatorEngine engine;
-    private ILogger logger;
 
-    public StringCalculator(ILogger logger) {
+    public StringCalculator(ILogger logger, ILoggerFailureNotificationWebService loggerFailWS) {
         this.logger = logger;
+        this.loggerFailWS = loggerFailWS;
+
         inputParser = new StringCalculatorInputParser();
         engine = new StringCalculatorEngine();
     }
@@ -22,9 +26,25 @@ public class StringCalculator {
         // Calculate the sum
         int sum = engine.sumNumbers(numbers);
         // Log the result
-        logger.write(String.valueOf(sum));
+        logResult(sum);
         // Return the result
         return sum;
+    }
+
+    private void logResult(int sum) {
+        try {
+            // Write the result to the log
+            logger.write(String.valueOf(sum));
+        }
+        catch (Exception e) {
+            // Logging failed. Send notification via the webservice.
+            try {
+                loggerFailWS.notifyLoggingFailure(e.getMessage());
+            }
+            catch (Exception e2) {
+                // Ignore failures in the notification WS
+            }
+        }
     }
 
 }
