@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import static org.mockito.Mockito.*;
+
 
 /**
  * Abstract parametrized test class.
@@ -47,7 +49,8 @@ public abstract class AbstractStringCalculatorParametrizedTest {
 
     @Before
     public void setUp() {
-        calculator = new StringCalculator();
+        ILogger logger = mock(ILogger.class);
+        calculator = new StringCalculator(logger);
     }
 
     @Test

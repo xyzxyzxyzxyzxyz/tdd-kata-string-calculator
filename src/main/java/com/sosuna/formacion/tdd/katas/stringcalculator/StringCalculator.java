@@ -8,8 +8,10 @@ public class StringCalculator {
 
     private StringCalculatorInputParser inputParser;
     private StringCalculatorEngine engine;
+    private ILogger logger;
 
-    public StringCalculator() {
+    public StringCalculator(ILogger logger) {
+        this.logger = logger;
         inputParser = new StringCalculatorInputParser();
         engine = new StringCalculatorEngine();
     }
@@ -19,6 +21,8 @@ public class StringCalculator {
         int[] numbers = inputParser.parseInput(input);
         // Calculate the sum
         int sum = engine.sumNumbers(numbers);
+        // Log the result
+        logger.write(String.valueOf(sum));
         // Return the result
         return sum;
     }

@@ -20,7 +20,7 @@ public class StringCalculatorFeature11Test {
     }
 
     @Test
-    public void test() {
+    public void calculatorShouldLogValidResults() {
         calculator.calculate("1,2,3");
         verify(logger).write("6");
     }
