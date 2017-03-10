@@ -1,11 +1,8 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import static org.mockito.Mockito.*;
 
 
 /**
@@ -33,7 +30,7 @@ import static org.mockito.Mockito.*;
 
  */
 @RunWith(Parameterized.class)
-public abstract class AbstractStringCalculatorParametrizedTest {
+public abstract class AbstractStringCalculatorParametrizedTest extends AbstractStringCalculatorTest {
 
     @Parameterized.Parameter(0)
     public String message;
@@ -41,19 +38,6 @@ public abstract class AbstractStringCalculatorParametrizedTest {
     public String input;
     @Parameterized.Parameter(2)
     public Object expectedResult;
-
-    public AbstractStringCalculatorParametrizedTest() {
-    }
-
-    private StringCalculator calculator;
-
-    @Before
-    public void setUp() {
-        ILogger logger = mock(ILogger.class);
-        ILoggerFailureNotificationWebService loggerFailWS = mock(ILoggerFailureNotificationWebService.class);
-
-        calculator = new StringCalculator(logger, loggerFailWS);
-    }
 
     @Test
     public void test() {

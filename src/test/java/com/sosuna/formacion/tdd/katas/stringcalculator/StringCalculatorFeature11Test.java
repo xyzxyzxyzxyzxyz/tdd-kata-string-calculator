@@ -1,26 +1,13 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
-import org.junit.Before;
 import org.junit.Test;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
 
 /**
  * Feature #11: Logging
  */
-public class StringCalculatorFeature11Test {
-
-    private StringCalculator calculator;
-    private ILogger logger;
-    private ILoggerFailureNotificationWebService loggerFailWS;
-
-    @Before
-    public void setUp() {
-        logger = mock(ILogger.class);
-        loggerFailWS = mock(ILoggerFailureNotificationWebService.class);
-
-        calculator = new StringCalculator(logger, loggerFailWS);
-    }
+public class StringCalculatorFeature11Test extends AbstractStringCalculatorTest {
 
     @Test
     public void calculatorShouldLogValidResults() {
