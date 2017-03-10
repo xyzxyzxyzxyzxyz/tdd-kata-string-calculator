@@ -25,10 +25,16 @@ public class StringCalculator {
         int[] numbers = inputParser.parseInput(input);
         // Calculate the sum
         int sum = engine.sumNumbers(numbers);
+        // Display the result
+        displayResult(sum);
         // Log the result
         logResult(sum);
         // Return the result
         return sum;
+    }
+
+    private void displayResult(int sum) {
+        System.out.println(String.valueOf(sum));
     }
 
     private void logResult(int sum) {
