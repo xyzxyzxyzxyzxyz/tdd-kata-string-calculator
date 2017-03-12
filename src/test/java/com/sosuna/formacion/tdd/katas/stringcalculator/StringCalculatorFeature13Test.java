@@ -12,7 +12,7 @@ import org.junit.Test;
 public abstract class StringCalculatorFeature13Test extends AbstractStringCalculatorTest {
 
     @Test
-    public void calculatorShouldShowResultOnConsoleOutput() {
+    public void calculatorShouldShowResultOnConsoleOutput() throws Throwable {
         calculator.calculate("1,2,3");
 
         assertConsoleOutputLineContentEquals("6");
@@ -22,6 +22,6 @@ public abstract class StringCalculatorFeature13Test extends AbstractStringCalcul
      * @param consoleOutputLineContent
      *      The console outputted line content, without the trailing newline sequence
      */
-    protected abstract void assertConsoleOutputLineContentEquals(String consoleOutputLineContent);
+    protected abstract void assertConsoleOutputLineContentEquals(String consoleOutputLineContent) throws Throwable;
 
 }
