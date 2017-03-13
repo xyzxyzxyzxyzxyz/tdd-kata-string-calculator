@@ -38,23 +38,22 @@ public class StringCalculatorFeature15Test {
                 "The result is 6" + System.lineSeparator() +
                 "Another input please" + System.lineSeparator();
 
-        final String    INTERACTIVE_OP1__CONSOLE_INPUT = "1,2,3";
-        final String    INTERACTIVE_OP1__EXPECTED_CALCULATOR_INPUT = "1,2,3";
-        final int       INTERACTIVE_OP1__CALCULATOR_OUTPUT = 6;
+        final String    INTERACTIVE_OP1__CONSOLE_INPUT = "4,5,6";
+        final String    INTERACTIVE_OP1__EXPECTED_CALCULATOR_INPUT = "4,5,6";
+        final int       INTERACTIVE_OP1__CALCULATOR_OUTPUT = 15;
         final String    INTERACTIVE_OP1__EXPECTED_CONSOLE_OUTPUT =
-                "The result is 6" + System.lineSeparator() +
-                "Another input please" + System.lineSeparator();
-
-        final String    INTERACTIVE_OP2__CONSOLE_INPUT = "4,5,6";
-        final String    INTERACTIVE_OP2__EXPECTED_CALCULATOR_INPUT = "1,2,3";
-        final int       INTERACTIVE_OP2__CALCULATOR_OUTPUT = 15;
-        final String    INTERACTIVE_OP2__EXPECTED_CONSOLE_OUTPUT =
                 "The result is 15" + System.lineSeparator() +
                 "Another input please" + System.lineSeparator();
 
+        final String    INTERACTIVE_OP2__CONSOLE_INPUT = "7,8,9";
+        final String    INTERACTIVE_OP2__EXPECTED_CALCULATOR_INPUT = "7,8,9";
+        final int       INTERACTIVE_OP2__CALCULATOR_OUTPUT = 24;
+        final String    INTERACTIVE_OP2__EXPECTED_CONSOLE_OUTPUT =
+                "The result is 24" + System.lineSeparator() +
+                "Another input please" + System.lineSeparator();
+
         final String    INTERACTIVE_EXIT__CONSOLE_INPUT = "";
-        final String    INTERACTIVE_EXIT__EXPECTED_CONSOLE_OUTPUT =
-                "" + System.lineSeparator();
+        final String    INTERACTIVE_EXIT__EXPECTED_CONSOLE_OUTPUT = "";     // The program doesn't print out anything when whe exit
 
 
         // Prepare the mock calculator behaviour
@@ -83,7 +82,6 @@ public class StringCalculatorFeature15Test {
         consoleOutput.mute();       // Stop capture
 
         // Verify interactions with mock calculator
-        // TODO: Will mockito throw an error because cliop and interop1 are the same input???
         verify(calculator, times(1)).calculate(CLI_OP__EXPECTED_CALCULATOR_INPUT);
         verify(calculator, times(1)).calculate(INTERACTIVE_OP1__EXPECTED_CALCULATOR_INPUT);
         verify(calculator, times(1)).calculate(INTERACTIVE_OP2__EXPECTED_CALCULATOR_INPUT);
@@ -94,7 +92,6 @@ public class StringCalculatorFeature15Test {
                         CLI_OP__EXPECTED_CONSOLE_OUTPUT +
                         INTERACTIVE_OP1__EXPECTED_CONSOLE_OUTPUT +
                         INTERACTIVE_OP2__EXPECTED_CONSOLE_OUTPUT +
-                        INTERACTIVE_EXIT__EXPECTED_CONSOLE_OUTPUT +
                         INTERACTIVE_EXIT__EXPECTED_CONSOLE_OUTPUT;
         assertEquals(
                 "Console output should be the accumulation of the expected console output for all operations",

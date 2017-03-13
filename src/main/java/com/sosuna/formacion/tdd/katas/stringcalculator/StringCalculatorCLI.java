@@ -1,11 +1,19 @@
 package com.sosuna.formacion.tdd.katas.stringcalculator;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class StringCalculatorCLI {
 
     private StringCalculator calculator;
 
+    private BufferedReader systemInReader;
+
     StringCalculatorCLI(StringCalculator calculator) {
         this.calculator = calculator;
+
+        systemInReader = new BufferedReader(new InputStreamReader(System.in));
     }
 
     /**
@@ -14,15 +22,23 @@ public class StringCalculatorCLI {
      *
      * @param args
      */
-    public void runWithArgs(String... args) {
+    public void runWithArgs(String... args) throws IOException {
         // Retrieve argument from command line
         String calculatorInput = args[0];
         // Remove surrounding '' from argument
         calculatorInput = calculatorInput.substring(1, calculatorInput.length()-1);
-        // Execute calculator
-        int result = calculator.calculate(calculatorInput);
-        // Display result message
-        System.out.println("The result is " + result);
+
+        while (!calculatorInput.isEmpty()) {
+            // Execute calculator
+            int result = calculator.calculate(calculatorInput);
+            // Display result message
+            System.out.println("The result is " + result);
+
+            // Ask for more input
+            System.out.println("Another input please");
+            calculatorInput = systemInReader.readLine();
+        }
+
     }
 
     /**
@@ -31,7 +47,7 @@ public class StringCalculatorCLI {
      *
      * @param args
      */
-    public static void main(String... args) {
+    public static void main(String... args) throws IOException {
         // Create calculator
         StringCalculator calculator = createCalculator();
 
